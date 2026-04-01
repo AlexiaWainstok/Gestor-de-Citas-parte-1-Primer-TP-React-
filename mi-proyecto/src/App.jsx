@@ -5,6 +5,9 @@ import ListaCitas from "./Componentes/ListaCitas";
 
 function App() {
 
+  const eliminarCita = (index) => {
+  setCitas(citas.filter((_, i) => i !== index));
+
   const [citas, setCitas] = useState([
     {
       mascota: "Firulais",
@@ -14,6 +17,9 @@ function App() {
       sintomas: "No come"
     }
   ]);
+
+
+};
 
   return (
     <>

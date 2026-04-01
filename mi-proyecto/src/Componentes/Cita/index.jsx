@@ -1,4 +1,4 @@
-function Cita({ cita }) {
+function Cita({ cita, eliminarCita }) {
   return (
     <div className="cita">
       <p>Mascota: <span>{cita.mascota}</span></p>
@@ -7,7 +7,7 @@ function Cita({ cita }) {
       <p>Hora: <span>{cita.hora}</span></p>
       <p>Síntomas: <span>{cita.sintomas}</span></p>
 
-      <button className="button eliminar u-full-width">
+      <button onClick={eliminarCita} className="button eliminar u-full-width">
         ELIMINAR ×
       </button>
 
@@ -17,3 +17,4 @@ function Cita({ cita }) {
 }
 
 export default Cita;
+

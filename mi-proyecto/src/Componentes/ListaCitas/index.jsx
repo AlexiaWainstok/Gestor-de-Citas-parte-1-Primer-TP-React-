@@ -5,9 +5,14 @@ function ListaCitas({ citas }) {
     <div>
       <h2>Administra tus citas</h2>
 
-      {citas.map((cita, index) => (
-        <Cita key={index} cita={cita} />
+      {citas.map((cita, index, eliminarCita) => (
+        <Cita 
+        key={index} 
+        cita={cita} 
+        eliminarCita={() => eliminarCita(index)}/>
       ))}
+
+      
     </div>
   );
 }

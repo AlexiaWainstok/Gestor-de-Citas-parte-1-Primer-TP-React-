@@ -1,6 +1,7 @@
-import Label from "./Label";
-import Input from "./Input";
-import Boton from "./Boton";
+import Label from "../Label";
+import Input from "../Input";
+import Boton from "../Index";
+import"./Formulario.css"; 
 
 function Formulario() {
   return (
@@ -21,7 +22,7 @@ function Formulario() {
         <Input tipo="time" />
 
         <Label texto="Síntomas" />
-        <textarea></textarea>
+        <textarea></textarea> 
 
         <Boton texto="Agregar Cita" />
       </form>
