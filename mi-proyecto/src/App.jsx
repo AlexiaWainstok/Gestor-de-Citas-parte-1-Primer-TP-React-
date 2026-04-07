@@ -5,21 +5,36 @@ import ListaCitas from "./Componentes/ListaCitas";
 
 function App() {
 
-  const eliminarCita = (index) => {
-  setCitas(citas.filter((_, i) => i !== index));
-
   const [citas, setCitas] = useState([
     {
-      mascota: "Firulais",
-      dueño: "Juan",
-      fecha: "20/03/2024",
-      hora: "10:30",
-      sintomas: "No come"
+      id: 1,
+      mascota: "Nina",
+      dueño: "Martin",
+      fecha: "2021-08-05",
+      hora: "08:20",
+      sintomas: "Le duele la pierna"
+    },
+    {
+      id: 2,
+      mascota: "Sifon",
+      dueño: "Flecha",
+      fecha: "2023-08-05",
+      hora: "09:24",
+      sintomas: "Duerme mucho"
+    },
+    {
+      id: 3,
+      mascota: "Floki",
+      dueño: "Ari",
+      fecha: "2023-08-05",
+      hora: "16:15",
+      sintomas: "No está comiendo"
     }
   ]);
 
-
-};
+  const eliminarCita = (index) => {
+    setCitas(citas.filter((_, i) => i !== index));
+  };
 
   return (
     <>
@@ -27,12 +42,20 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <Formulario />
-          <ListaCitas citas={citas} />
+          <div className="one-half">
+            <Formulario />
+          </div>
+
+          <div className="one-half">
+            <ListaCitas citas={citas} eliminarCita={eliminarCita} />
+          </div>
+          <div className="lista-citas"></div>
         </div>
       </div>
     </>
   );
 }
+
+
 
 export default App;

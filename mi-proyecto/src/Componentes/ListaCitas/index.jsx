@@ -1,19 +1,15 @@
-import Cita from "./Cita";
+import Cita from "../Cita";
+import "./ListaCitas.css"
 
 function ListaCitas({ citas }) {
   return (
-    <div>
+    <>
       <h2>Administra tus citas</h2>
 
-      {citas.map((cita, index, eliminarCita) => (
-        <Cita 
-        key={index} 
-        cita={cita} 
-        eliminarCita={() => eliminarCita(index)}/>
+      {citas.map((cita) => (
+        <Cita key={cita.id} cita={cita} />
       ))}
-
-      
-    </div>
+    </>
   );
 }
 

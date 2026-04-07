@@ -1,36 +1,28 @@
-import Label from "../Label";
+
+import Boton from "../Boton";
 import Input from "../Input";
-import Boton from "../Index";
-import"./Formulario.css"; 
+import "./Formulario.css"
 
 function Formulario() {
   return (
-    <div>
+    <>
       <h2>Crear mi Cita</h2>
 
       <form>
-        <Label texto="Nombre Mascota" />
-        <Input tipo="text" />
+        <Input label="Nombre Mascota" type="text" placeholder="Nombre Mascota" />
+        <Input label="Nombre Dueño" type="text" placeholder="Nombre dueño de la mascota" />
+        <Input label="Fecha" type="date" />
+        <Input label="Hora" type="time" />
 
-        <Label texto="Nombre Dueño" />
-        <Input tipo="text" />
+      <label>Sintomas</label><textarea name="sintomas" class="u-full-width"></textarea>
 
-        <Label texto="Fecha" />
-        <Input tipo="date" />
-
-        <Label texto="Hora" />
-        <Input tipo="time" />
-
-        <Label texto="Síntomas" />
-        <textarea></textarea> 
-
-        <Boton texto="Agregar Cita" />
+        <Boton/>
       </form>
-
-
-      
-    </div>
+    </>
   );
 }
 
 export default Formulario;
+
+
+
