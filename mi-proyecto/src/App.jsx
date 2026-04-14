@@ -32,9 +32,15 @@ function App() {
     }
   ]);
 
-  const eliminarCita = (index) => {
-    setCitas(citas.filter((_, i) => i !== index));
-  };
+const eliminarCita = (id) => {
+  if (window.confirm("¿Eliminar esta cita?")) {
+    setCitas(citas.filter(c => c.id !== id));
+  }
+};
+
+  const agregarCita = (cita) => {
+  setCitas([...citas, cita]);
+};
 
   return (
     <>
@@ -43,7 +49,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="one-half">
-            <Formulario />
+            <Formulario agregarCita={agregarCita} />
           </div>
 
           <div className="one-half">

@@ -1,16 +1,16 @@
 import BotonEliminar from "../BotonEliminar";
-import "./Cita.css"
+import "./Cita.css";
 
-function Cita({ cita }) {
+function Cita({ cita, eliminarCita }) {
   return (
-    <div class="cita">
-      <p>Mascota: <span>{cita.mascota}</span></p>
-      <p>Dueño: <span>{cita.dueño}</span></p>
-      <p>Fecha: <span>{cita.fecha}</span></p>
-      <p>Hora: <span>{cita.hora}</span></p>
-      <p>Sintomas: <span>{cita.sintomas}</span></p>
+    <div className="cita">
+      <p>Mascota: {cita.mascota}</p>
+      <p>Dueño: {cita.dueño}</p>
+      <p>Fecha: {cita.fecha}</p>
+      <p>Hora: {cita.hora}</p>
+      <p>Sintomas: {cita.sintomas}</p>
 
-      <BotonEliminar/>
+      <BotonEliminar onClick={() => eliminarCita(cita.id)} />
     </div>
   );
 }

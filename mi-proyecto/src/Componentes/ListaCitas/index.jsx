@@ -1,13 +1,17 @@
 import Cita from "../Cita";
-import "./ListaCitas.css"
+import "./ListaCitas.css";
 
-function ListaCitas({ citas }) {
+function ListaCitas({ citas, eliminarCita }) {
   return (
     <>
       <h2>Administra tus citas</h2>
 
       {citas.map((cita) => (
-        <Cita key={cita.id} cita={cita} />
+        <Cita
+          key={cita.id}
+          cita={cita}
+          eliminarCita={eliminarCita}
+        />
       ))}
     </>
   );

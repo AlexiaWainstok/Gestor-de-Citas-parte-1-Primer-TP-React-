@@ -1,8 +1,8 @@
-import "./BotonEliminar.css"
-
-function BotonEliminar() {
+function BotonEliminar({ onClick }) {
   return (
-<button className="button elimnar u-full-width">Eliminar ×</button>
+    <button onClick={onClick} className="button eliminar u-full-width">
+      Eliminar
+    </button>
   );
 }
 
